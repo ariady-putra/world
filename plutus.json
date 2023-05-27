@@ -1,0 +1,106 @@
+{
+  "preamble": {
+    "title": "hello/world",
+    "description": "Aiken contracts for project 'hello/world'",
+    "version": "0.0.0",
+    "plutusVersion": "v2",
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "always_true.spend",
+      "datum": {
+        "title": "_datum",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "compiledCode": "500100003222253330044a22930b2b9a01",
+      "hash": "90592520b329fe08f0e93946ecd405e49b7480795e27cb618f002d88"
+    },
+    {
+      "title": "hello_world.spend",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/hello_world~1Datum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/hello_world~1Redeemer"
+        }
+      },
+      "compiledCode": "5901fc01000032323232323232323232322223232533300a3232533300c002100114a0666464446466008002466e3c004010dd6198059806998059806800a40009008180080091129998090010a50132325333010300300214a2266600a00a002006602a0066eb8c04c008dd7198039804801240000086466e3d22010d48656c6c6f2c20576f726c642100001375c6600c601000490000a4c2c6400a64a66601466e1d20000011323253330103012002149854cc035241334c6973742f5475706c652f436f6e73747220636f6e7461696e73206d6f7265206974656d73207468616e2065787065637465640016375c6020002601000a2a660169212b436f6e73747220696e64657820646964206e6f74206d6174636820616e7920747970652076617269616e7400163008004320033253330093370e900000089919299980798088010a4c2a66018921334c6973742f5475706c652f436f6e73747220636f6e7461696e73206d6f7265206974656d73207468616e2065787065637465640016375c601e002600e0062a660149212b436f6e73747220696e64657820646964206e6f74206d6174636820616e7920747970652076617269616e740016300700233001001480008888cccc01ccdc38008018061199980280299b8000448008c0380040080088c018dd5000918021baa0015734ae7155ceaab9e5573eae855d11",
+      "hash": "d2c20722f41d20fd4c73544561baab3ab98d6d00126ff4f322e574df"
+    },
+    {
+      "title": "when_is.unlock",
+      "datum": {
+        "title": "lock",
+        "schema": {
+          "$ref": "#/definitions/Int"
+        }
+      },
+      "redeemer": {
+        "title": "key",
+        "schema": {
+          "$ref": "#/definitions/Int"
+        }
+      },
+      "compiledCode": "587f0100003232323232323232222323253330093232533300b3370e90000008a5014a260166ea8004c94ccc028004530103d87a800014c103d87980003370e0040022930b1bad004375a0046600200290001111199980319b87001003009233330050053370000890011805800801001118021baa0015734aae7555cf2ba15745",
+      "hash": "8fca462c50f59f3d42a929434e0d9e8811b702c0ccdcc2047d7ee486"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Data": {
+      "title": "Data",
+      "description": "Any Plutus data."
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "hello_world/Datum": {
+      "title": "Datum",
+      "anyOf": [
+        {
+          "title": "Datum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "owner",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    },
+    "hello_world/Redeemer": {
+      "title": "Redeemer",
+      "anyOf": [
+        {
+          "title": "Redeemer",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "msg",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
