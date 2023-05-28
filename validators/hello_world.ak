@@ -12,7 +12,7 @@ use world/module.{must_be_signed_by}
 // .. txn.must_be_signed_by(..)
 
 // use world/module.{must_be_signed_by} as txn
-// .. module.must_be_signed_by(..)
+// .. must_be_signed_by(..)
 // OR
 // .. txn.must_be_signed_by(..)
 
