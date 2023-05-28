@@ -9,6 +9,8 @@ type State {
 validator {
   /// Unlocks the funds when `key` is equal to `lock`
   fn unlock(lock: Int, key: Int, _: Data) -> Bool {
+    // `when-is` expression can also be used to destructure values that contain other values
+    // such as tuples and lists
     let process_state =
       fn(state) {
         when state is {
@@ -18,6 +20,9 @@ validator {
             True
         }
       }
+    // and it's not just the top level data structure that can be pattern matched, contained values can also be matched.
+    // This gives when the ability to concisely express flow control that might be verbose without pattern matching.
+    //
     // Pattern matching on a `Bool` value is discouraged and `if-else` expressions should be use instead
     if key == lock {
       unlocked()
