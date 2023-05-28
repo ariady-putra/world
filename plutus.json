@@ -25,6 +25,23 @@
       "hash": "90592520b329fe08f0e93946ecd405e49b7480795e27cb618f002d88"
     },
     {
+      "title": "error_todo.spend",
+      "datum": {
+        "title": "_datum",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "compiledCode": "500100003222253330044a22930b2b9a01",
+      "hash": "90592520b329fe08f0e93946ecd405e49b7480795e27cb618f002d88"
+    },
+    {
       "title": "hello_world.spend",
       "datum": {
         "title": "datum",
@@ -42,6 +59,40 @@
       "hash": "d2c20722f41d20fd4c73544561baab3ab98d6d00126ff4f322e574df"
     },
     {
+      "title": "opaque_type.spend",
+      "datum": {
+        "title": "_datum",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "compiledCode": "500100003222253330044a22930b2b9a01",
+      "hash": "90592520b329fe08f0e93946ecd405e49b7480795e27cb618f002d88"
+    },
+    {
+      "title": "pattern_matching.spend",
+      "datum": {
+        "title": "_datum",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "compiledCode": "500100003222253330044a22930b2b9a01",
+      "hash": "90592520b329fe08f0e93946ecd405e49b7480795e27cb618f002d88"
+    },
+    {
       "title": "when_is.unlock",
       "datum": {
         "title": "lock",
@@ -55,8 +106,8 @@
           "$ref": "#/definitions/Int"
         }
       },
-      "compiledCode": "587f0100003232323232323232222323253330093232533300b3370e90000008a5014a260166ea8004c94ccc028004530103d87a800014c103d87980003370e0040022930b1bad004375a0046600200290001111199980319b87001003009233330050053370000890011805800801001118021baa0015734aae7555cf2ba15745",
-      "hash": "8fca462c50f59f3d42a929434e0d9e8811b702c0ccdcc2047d7ee486"
+      "compiledCode": "587d0100003232323232323232222323253330093232533300b3370e90000008a5014a260166ea80054ccc024cdc38010008a60103d87a800014c103d8798000149858dd68021bad00233001001480008888cccc018cdc38008018049199980280299b8000448008c02c0040080088c010dd5000ab9a5573aaae795d0aba21",
+      "hash": "6169b2bcafd725854a29144b545d1d807038ee08e2ca02e777791c41"
     }
   ],
   "definitions": {
