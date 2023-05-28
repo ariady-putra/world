@@ -18,13 +18,19 @@ validator {
             True
         }
       }
-    when key == lock is {
-      True ->
-        unlocked()
-      False ->
-        locked()
+    // Pattern matching on a `Bool` value is discouraged and `if-else` expressions should be use instead
+    if key == lock {
+      unlocked()
+    } else {
+      locked()
     }
       |> process_state
+    // Note that, while it may look like an imperative instruction:
+    // `if this then do that or else do that` is in fact 1 single expression.
+    // This means, in particular, that the return types of both branches have to match.
+    //
+    // Incidentally, you can have as many conditional `else-if` branches as you need:
+    // if condition1 { .. } else if condition2 { .. } else { .. }
   }
 }
 
