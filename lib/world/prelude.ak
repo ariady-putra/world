@@ -13,9 +13,9 @@ pub type Option {
   Some
 }
 /// The original `Option` and `Some` can still be used
-// pub fn go() -> aiken.Option<Int> {
-//   aiken.Some(1)
-// }
+pub fn go() -> aiken.Option<Int> {
+  aiken.Some(1)
+}
 
 // The content of the Prelude module is documented in
 // https://aiken-lang.github.io/prelude/aiken.html
