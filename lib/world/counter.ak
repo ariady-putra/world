@@ -1,5 +1,7 @@
 //// The type is defined with the `opaque` keyword.
 
+use aiken/cbor
+
 /// An `Int` value wrapper.
 pub opaque type Counter {
   value: Int,
@@ -18,5 +20,12 @@ pub fn increment(counter: Counter) {
 
 /// Retrieves the value of a `Counter`.
 pub fn get_value(counter: Counter) {
+  trace @"@counter.get_value(counter: Counter)"
+  //
+  trace @"cbor.diagnostic(counter):"
+  trace cbor.diagnostic(counter)
+  // 1
+  trace @""
+  //
   counter.value
 }

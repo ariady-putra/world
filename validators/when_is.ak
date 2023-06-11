@@ -14,7 +14,7 @@
 //// This is particularly efficient if you write your tests as assertions using a binary
 //// operator (`==`, `>=`, `!=`, etc...).
 
-// use aiken/transaction.{ScriptContext}
+use aiken/cbor
 
 // Enum
 type State {
@@ -87,17 +87,53 @@ test when_is() {
 // aiken check -m when
 
 test when_locked_is_locked() {
-  locked() == Locked
+  trace @"@test when_locked_is_locked()"
+  //
+  let is_locked = locked()
+  //
+  trace @"cbor.diagnostic(enum):"
+  trace cbor.diagnostic(is_locked)
+  // 121([])
+  trace @""
+  //
+  is_locked == Locked
 }
 
 test when_unlocked_is_unlocked() {
-  unlocked() == Unlocked
+  trace @"@test when_unlocked_is_unlocked()"
+  //
+  let is_unlocked = unlocked()
+  //
+  trace @"cbor.diagnostic(enum):"
+  trace cbor.diagnostic(is_unlocked)
+  // 122([])
+  trace @""
+  //
+  is_unlocked == Unlocked
 }
 
 test when_locked_is_not_unlocked() {
-  locked() != Unlocked
+  trace @"@test when_locked_is_not_unlocked()"
+  //
+  let is_locked = locked()
+  //
+  trace @"cbor.diagnostic(enum):"
+  trace cbor.diagnostic(is_locked)
+  // 121([])
+  trace @""
+  //
+  is_locked != Unlocked
 }
 
 test when_unlocked_is_not_locked() {
-  unlocked() != Locked
+  trace @"@test when_unlocked_is_not_locked()"
+  //
+  let is_unlocked = unlocked()
+  //
+  trace @"cbor.diagnostic(enum):"
+  trace cbor.diagnostic(is_unlocked)
+  // 122([])
+  trace @""
+  //
+  is_unlocked != Locked
 }

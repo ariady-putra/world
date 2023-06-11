@@ -1,3 +1,14 @@
+//// ```
+//// ┍━ hello_world ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+//// │ PASS [mem: ######, cpu: ########] hello_world
+//// │ ↳ @hello_world.must_say_hello(msg: ByteArray)
+//// │ ↳ cbor.diagnostic(msg):
+//// │ ↳ h'48656C6C6F2C20576F726C6421'
+//// │ ↳ 
+//// ┕━━━━━━━━━━━━━━━━ 1 tests | 1 passed | 0 failed
+//// ```
+
+use aiken/cbor
 use aiken/hash.{Blake2b_224, Hash}
 use aiken/transaction.{ScriptContext}
 use aiken/transaction/credential.{VerificationKey}
@@ -68,6 +79,12 @@ validator {
 }
 
 fn must_say_hello(msg: ByteArray) -> Bool {
+  trace @"@hello_world.must_say_hello(msg: ByteArray)"
+  //
+  trace @"cbor.diagnostic(msg):"
+  trace cbor.diagnostic(msg)
+  // h'48656C6C6F2C20576F726C6421'
+  trace @""
   // Anonymous function
   let eq =
     fn(a, b) { a == b }
@@ -85,7 +102,7 @@ fn must_say_hello(msg: ByteArray) -> Bool {
 // aiken blueprint address -m hello_world.spend > hello_world.address
 // aiken blueprint convert -m hello_world.spend > hello_world.plutus
 
-// aiken check -m hello_world
+// aiken check -m hello
 test hello_world() {
-  1 + 1 == 2
+  hello_world_msg |> must_say_hello
 }

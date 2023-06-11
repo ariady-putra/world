@@ -42,9 +42,9 @@
       "hash": "90592520b329fe08f0e93946ecd405e49b7480795e27cb618f002d88"
     },
     {
-      "title": "documentation.document",
+      "title": "cbor_diagnostic.diagnose",
       "datum": {
-        "title": "_datum",
+        "title": "datum",
         "schema": {
           "$ref": "#/definitions/Data"
         }
@@ -55,8 +55,25 @@
           "$ref": "#/definitions/Data"
         }
       },
-      "compiledCode": "500100003222253330044a22930b2b9a01",
-      "hash": "90592520b329fe08f0e93946ecd405e49b7480795e27cb618f002d88"
+      "compiledCode": "590103010000323232323232323232222533300653330063370e900018041baa003132323232533300e30100021533300a3370e006902a099b8f0014890d48656c6c6f2c20576f726c64210014a02a66016921334c6973742f5475706c652f436f6e73747220636f6e7461696e73206d6f7265206974656d73207468616e2065787065637465640016375c601c002601c0046eb4c030004c024dd50018a99803a4812a4578706563746564206f6e20696e636f727265637420636f6e7374727563746f722076617269616e742e0016149858cc0040052000222233330053370e0020060144666600a00a66e000112002300c0010020025734ae7155ceaab9e5573eae855d101",
+      "hash": "c0d0ddc91b9f85d261729f38294fb16f984baf71161403fe3c40c54f"
+    },
+    {
+      "title": "documentation_trace.document",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/Int"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/Int"
+        }
+      },
+      "compiledCode": "583d010000322223232533300632325333008001100214a066600e66e1ccdc3001a400890002504a266e1ccdc3000a400890000a4c2c6eb4010dd68012b9a1",
+      "hash": "b828da4d6f5f247a5cb2f5e61bd5189b2d39702cb5139defe6d4d7bf"
     },
     {
       "title": "error_todo.spend",
