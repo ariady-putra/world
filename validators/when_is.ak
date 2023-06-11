@@ -1,3 +1,19 @@
+//// `aiken check -m when`
+//// ```
+//// ┍━ when_is ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+//// │ PASS [mem: ####, cpu: ######] when_is
+//// │ PASS [mem: ####, cpu: ######] when_locked_is_locked
+//// │ PASS [mem: ####, cpu: ######] when_unlocked_is_unlocked
+//// │ PASS [mem: ####, cpu: ######] when_locked_is_not_unlocked
+//// │ PASS [mem: ####, cpu: ######] when_unlocked_is_not_locked
+//// ┕━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5 tests | 5 passed | 0 failed
+//// ```
+//// Aiken's test runner is (trying to be) intelligent and helpful,
+//// especially on test failures. If a test fails,
+//// the test runner will do its best to provide some information about what went wrong.
+//// This is particularly efficient if you write your tests as assertions using a binary
+//// operator (`==`, `>=`, `!=`, etc...).
+
 // use aiken/transaction.{ScriptContext}
 
 // Enum
@@ -57,8 +73,31 @@ fn unlocked() {
 // aiken blueprint convert -m when_is.unlock > when_is.plutus
 
 // aiken check -m when_is
+/// Tests cannot call other tests!  If you need to re-use code between tests, create a function.
 test when_is() {
   //   expect True = unlock(3, 3, 3)
   //   expect False = unlock(2, 1, 0)
   True
+}
+
+// One exciting thing about tests is that they use the same virtual machine as the one for executing contracts on-chain.
+// Said differently, they are actual snippets of on-chain code you can run and reason about in the same context as your
+// production code.
+
+// aiken check -m when
+
+test when_locked_is_locked() {
+  locked() == Locked
+}
+
+test when_unlocked_is_unlocked() {
+  unlocked() == Unlocked
+}
+
+test when_locked_is_not_unlocked() {
+  locked() != Unlocked
+}
+
+test when_unlocked_is_not_locked() {
+  unlocked() != Locked
 }
