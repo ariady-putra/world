@@ -31,8 +31,7 @@ type Redeemer {
 //
 // Note that you can only declare module constants for the following Aiken types: `Int`, `ByteArray` and `String`
 //
-const hello_world_msg: ByteArray =
-  "Hello, World!"
+const hello_world_msg: ByteArray = "Hello, World!"
 
 /// A simple validator which replicates a basic public/private signature lock.
 ///
@@ -78,8 +77,8 @@ fn must_say_hello(msg: ByteArray) -> Bool {
   msg |> equals_to_hello_world
 }
 
-// aiken blueprint address -m hello_world.spend >> hello_world.address
-// aiken blueprint convert -m hello_world.spend >> hello_world.plutus
+// aiken blueprint address -m hello_world.spend > hello_world.address
+// aiken blueprint convert -m hello_world.spend > hello_world.plutus
 
 // aiken check -m hello_world
 test hello_world() {

@@ -4,21 +4,19 @@ validator {
   }
 }
 
-// aiken blueprint address -m pattern_matching.spend >> pattern_matching.address
-// aiken blueprint convert -m pattern_matching.spend >> pattern_matching.plutus
+// aiken blueprint address -m pattern_matching.spend > pattern_matching.address
+// aiken blueprint convert -m pattern_matching.spend > pattern_matching.plutus
 
 // aiken check -m pattern_matching
 test pattern_matching() {
   //
   // let
-  let (a, b, c) =
-    (1, 2, 3)
+  let (a, b, c) = (1, 2, 3)
   //
   // as
   let xs =
     when [[a], [b, b], [c, c, c]] is {
-      [_, [_, ..] as inner_list, ..] ->
-        inner_list
+      [_, [_, ..] as inner_list, ..] -> inner_list
       _ ->
         []
     }
@@ -26,9 +24,7 @@ test pattern_matching() {
   //
   // Clause Guards
   when xs is {
-    [a, b] if a == b && b != c ->
-      True
-    _ ->
-      False
+    [a, b] if a == b && b != c -> True
+    _ -> False
   }
 }

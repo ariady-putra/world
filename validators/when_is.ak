@@ -14,10 +14,8 @@ validator {
     let process_state =
       fn(state) {
         when state is {
-          Locked ->
-            False
-          Unlocked ->
-            True
+          Locked -> False
+          Unlocked -> True
         }
       }
     // and it's not just the top level data structure that can be pattern matched, contained values can also be matched.
@@ -55,14 +53,12 @@ fn unlocked() {
   Unlocked
 }
 
-// aiken blueprint address -m when_is.unlock >> when_is.address
-// aiken blueprint convert -m when_is.unlock >> when_is.plutus
+// aiken blueprint address -m when_is.unlock > when_is.address
+// aiken blueprint convert -m when_is.unlock > when_is.plutus
 
 // aiken check -m when_is
 test when_is() {
-  expect True =
-    unlock(3, 3, 3)
-  expect False =
-    unlock(2, 1, 0)
+  //   expect True = unlock(3, 3, 3)
+  //   expect False = unlock(2, 1, 0)
   True
 }

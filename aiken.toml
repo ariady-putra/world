@@ -1,14 +1,14 @@
-name = "hello/world"
+name = "hello/world"        # {organisation}/{project}
 version = "0.0.0"
 license = "Apache-2.0"
 description = "Aiken contracts for project 'hello/world'"
 
-[repository]
-user = "hello"
+[repository]                # additional structured information on a project to show in generated documentation
+user = "ariady-putra"
 project = "world"
-platform = "github"
+platform = "github"         # `github`, `gitlab` or `bitbucket`
 
-[[dependencies]]
+[[dependencies]]            # `aiken packages`
 name = "aiken-lang/stdlib"
-version = "main"
-source = "github"
+version = "main"            # branch or git commit hash
+source = "github"           # `github`, `gitlab` or `bitbucket`

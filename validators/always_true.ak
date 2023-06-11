@@ -4,8 +4,8 @@ validator {
   }
 }
 
-// aiken blueprint address -m always_true.spend >> always_true.address
-// aiken blueprint convert -m always_true.spend >> always_true.plutus
+// aiken blueprint address -m always_true.spend > always_true.address
+// aiken blueprint convert -m always_true.spend > always_true.plutus
 
 // aiken check -m always_true
 test always_true() {

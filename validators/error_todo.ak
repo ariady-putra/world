@@ -12,16 +12,15 @@ fn favourite_number() -> Int {
 
 fn expect_some_value(opt: Option<a>) -> a {
   when opt is {
-    Some(a) ->
-      a
+    Some(a) -> a
     None ->
       // Under the hood text strings are UTF-8 encoded binaries and can contain any valid unicode
       error @"`Option` has no value"
   }
 }
 
-// aiken blueprint address -m error_todo.spend >> error_todo.address
-// aiken blueprint convert -m error_todo.spend >> error_todo.plutus
+// aiken blueprint address -m error_todo.spend > error_todo.address
+// aiken blueprint convert -m error_todo.spend > error_todo.plutus
 
 // aiken check -m error_todo
 test error_todo() {

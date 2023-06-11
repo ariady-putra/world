@@ -12,8 +12,8 @@ validator {
   }
 }
 
-// aiken blueprint address -m opaque_type.spend >> opaque_type.address
-// aiken blueprint convert -m opaque_type.spend >> opaque_type.plutus
+// aiken blueprint address -m opaque_type.spend > opaque_type.address
+// aiken blueprint convert -m opaque_type.spend > opaque_type.plutus
 
 // aiken check -m opaque_type
 test opaque_type() {
