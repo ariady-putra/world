@@ -8,7 +8,41 @@
   },
   "validators": [
     {
+      "title": "aiken_builtin.unlock",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/Int"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/Int"
+        }
+      },
+      "compiledCode": "581c01000032222323253330063370e0040022930b1bad004375a004ae69",
+      "hash": "79e6dfd6f86f4cd5275ec5cdf0f8621a0310a5e842fbd7ced7e28b01"
+    },
+    {
       "title": "always_true.spend",
+      "datum": {
+        "title": "_datum",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "compiledCode": "500100003222253330044a22930b2b9a01",
+      "hash": "90592520b329fe08f0e93946ecd405e49b7480795e27cb618f002d88"
+    },
+    {
+      "title": "documentation.document",
       "datum": {
         "title": "_datum",
         "schema": {
