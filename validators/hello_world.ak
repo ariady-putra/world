@@ -58,7 +58,12 @@ validator {
       //must_be_signed_by(datum.owner, txn)
       txn |> must_be_signed_by(pkh: datum.owner)
 
+    // The `?` operator (reads as `trace-if-false operator`)
+    // This postfix operator can be appended to any boolean expression and will trace the expression only if it evaluates to `False`
+    // This is useful to trace an entire evaluation path that led to a final expression being `False`
     must_say_hello? && must_be_signed?
+    // The `?` operator works like `trace` and is therefore affected by the `--keep-traces` and `--no-traces` options.
+    // When compiling for production, it has therefore no effect on the program and behaves as if it wasn't there at all.
   }
 }
 
