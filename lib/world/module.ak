@@ -3,7 +3,7 @@ use aiken/list
 use aiken/transaction.{ScriptContext}
 use aiken/transaction/credential.{VerificationKey}
 
-// `pub` keyword makes this function usable from other modules
+/// `pub` keyword makes this function usable from other modules.
 pub fn must_be_signed_by(
   pkh: Hash<Blake2b_224, VerificationKey>,
   //
