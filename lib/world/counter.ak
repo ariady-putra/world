@@ -2,7 +2,7 @@
 
 use aiken/cbor
 
-/// An `Int` value wrapper.
+/// An `Int` value newtype.
 pub opaque type Counter {
   value: Int,
 }

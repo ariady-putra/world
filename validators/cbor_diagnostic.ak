@@ -68,8 +68,8 @@ fn diagnose_data(data: Data) -> String {
   cbor.diagnostic(data)
 }
 
-// aiken blueprint address -m cbor_diagnostic.spend > cbor_diagnostic.address
-// aiken blueprint convert -m cbor_diagnostic.spend > cbor_diagnostic.plutus
+// aiken blueprint address -m cbor_diagnostic.diagnose > cbor_diagnostic.address
+// aiken blueprint convert -m cbor_diagnostic.diagnose > cbor_diagnostic.plutus
 
 // aiken check -m cbor
 test cbor_diagnostic() {

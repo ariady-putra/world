@@ -18,8 +18,8 @@ fn int_equals_to(a: Int, b: Int) -> Bool {
   builtin.equals_integer(a, b)
 }
 
-// aiken blueprint address -m aiken_builtin.spend > aiken_builtin.address
-// aiken blueprint convert -m aiken_builtin.spend > aiken_builtin.plutus
+// aiken blueprint address -m aiken_builtin.unlock > aiken_builtin.address
+// aiken blueprint convert -m aiken_builtin.unlock > aiken_builtin.plutus
 
 // aiken check -m aiken_builtin
 test aiken_builtin() {

@@ -24,8 +24,8 @@ fn is_even(n: Int) -> Bool {
   n % 2 == 0
 }
 
-// aiken blueprint address -m doc_trace.spend > doc_trace.address
-// aiken blueprint convert -m doc_trace.spend > doc_trace.plutus
+// aiken blueprint address -m documentation_trace.document > doc_trace.address
+// aiken blueprint convert -m documentation_trace.document > doc_trace.plutus
 
 // aiken check -m dt
 
