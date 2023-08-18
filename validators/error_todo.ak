@@ -15,7 +15,7 @@ fn expect_some_value(opt: Option<a>) -> a {
     Some(a) -> a
     None ->
       // Under the hood text strings are UTF-8 encoded binaries and can contain any valid unicode
-      error @"`Option` has no value"
+      fail @"`Option` has no value"
   }
 }
 

@@ -1,12 +1,28 @@
 //// `aiken check -m when`
 //// ```
-//// ┍━ when_is ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-//// │ PASS [mem: ####, cpu: ######] when_is
-//// │ PASS [mem: ####, cpu: ######] when_locked_is_locked
-//// │ PASS [mem: ####, cpu: ######] when_unlocked_is_unlocked
-//// │ PASS [mem: ####, cpu: ######] when_locked_is_not_unlocked
-//// │ PASS [mem: ####, cpu: ######] when_unlocked_is_not_locked
-//// ┕━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5 tests | 5 passed | 0 failed
+//// ┍━ when_is ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+//// │ PASS [mem:    200, cpu:     23100] when_is
+//// │ PASS [mem:  34455, cpu:  16957353] when_locked_is_locked
+//// │ ↳ @test when_locked_is_locked()
+//// │ ↳ cbor.diagnostic(enum):
+//// │ ↳ 121([])
+//// │ ↳ 
+//// │ PASS [mem:  34455, cpu:  16957353] when_unlocked_is_unlocked
+//// │ ↳ @test when_unlocked_is_unlocked()
+//// │ ↳ cbor.diagnostic(enum):
+//// │ ↳ 122([])
+//// │ ↳ 
+//// │ PASS [mem:  35056, cpu:  17175909] when_locked_is_not_unlocked
+//// │ ↳ @test when_locked_is_not_unlocked()
+//// │ ↳ cbor.diagnostic(enum):
+//// │ ↳ 121([])
+//// │ ↳ 
+//// │ PASS [mem:  35056, cpu:  17175909] when_unlocked_is_not_locked
+//// │ ↳ @test when_unlocked_is_not_locked()
+//// │ ↳ cbor.diagnostic(enum):
+//// │ ↳ 122([])
+//// │ ↳ 
+//// ┕━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5 tests | 5 passed | 0 failed
 //// ```
 //// Aiken's test runner is (trying to be) intelligent and helpful,
 //// especially on test failures. If a test fails,

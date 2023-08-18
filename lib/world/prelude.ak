@@ -10,8 +10,8 @@
 //// with the same name as an item from the prelude.
 ////
 //// ```
-//// ┍━ world/prelude ━━━━━━━━━━━━━━━━━━━━━━
-//// │ PASS [mem: ####, cpu: ######] prelude
+//// ┍━ world/prelude ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+//// │ PASS [mem: 114124, cpu:  53519991] prelude
 //// │ ↳ @test prelude()
 //// │ ↳ cbor.diagnostic(aiken.Option<Int>):
 //// │ ↳ 121([_ 1])
@@ -22,7 +22,7 @@
 //// │ ↳ cbor.diagnostic(enum):
 //// │ ↳ 121([])
 //// │ ↳ 
-//// ┕━━━━━━━━ 1 tests | 1 passed | 0 failed
+//// ┕━━━━━━━━━━━━━ 1 tests | 1 passed | 0 failed
 //// ```
 
 use aiken

@@ -1,11 +1,11 @@
 //// ```
-//// ┍━ hello_world ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-//// │ PASS [mem: ######, cpu: ########] hello_world
+//// ┍━ hello_world ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+//// │ PASS [mem: 133674, cpu:  70466061] hello_world
 //// │ ↳ @hello_world.must_say_hello(msg: ByteArray)
 //// │ ↳ cbor.diagnostic(msg):
 //// │ ↳ h'48656C6C6F2C20576F726C6421'
 //// │ ↳ 
-//// ┕━━━━━━━━━━━━━━━━ 1 tests | 1 passed | 0 failed
+//// ┕━━━━━━━━━━━━━━━━━ 1 tests | 1 passed | 0 failed
 //// ```
 
 use aiken/cbor

@@ -28,13 +28,13 @@
 //// representation is called a `CBOR diagnostic`:
 //// https://www.rfc-editor.org/rfc/rfc8949#name-diagnostic-notation
 //// ```
-//// ┍━ cbor_diagnostic ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-//// │ PASS [mem: ####, cpu: ######] cbor_diagnostic
+//// ┍━ cbor_diagnostic ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+//// │ PASS [mem:  35758, cpu:  16641608] cbor_diagnostic
 //// │ ↳ @test cbor_diagnostic()
 //// │ ↳ diagnose_data(Bool):
 //// │ ↳ 122([])
 //// │ ↳ 
-//// ┕━━━━━━━━━━━━━━━━ 1 tests | 1 passed | 0 failed
+//// ...
 //// ```
 //// Why use CBOR diagnostics you may ask? https://aiken-lang.org/language-tour/troubleshooting#cbor-diagnostic
 
@@ -87,8 +87,7 @@ test cbor_diagnostic() {
 
 /// `aiken check -m cbor_diagnostics`
 /// ```
-/// ┍━ cbor_diagnostic ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-/// │ PASS [mem: ####, cpu: ######] cbor_diagnostics
+/// │ PASS [mem: 307409, cpu: 136724627] cbor_diagnostics
 /// │ ↳ 42
 /// │ ↳ h'666F6F'
 /// │ ↳ [_ 1, 2, 3]
@@ -96,7 +95,6 @@ test cbor_diagnostic() {
 /// │ ↳ {_ 1: h'FF' }
 /// │ ↳ 121([_ 42])
 /// │ ↳ 122([])
-/// ┕━━━━━━━━━━━━━━━━━ 1 tests | 1 passed | 0 failed
 /// ```
 test cbor_diagnostics() {
   // An Int becomes a CBOR int
@@ -146,13 +144,11 @@ test cbor_diagnostics() {
 
 /// `aiken check -m cbor_of_mydatum`
 /// ```
-/// ┍━ cbor_diagnostic ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-/// │ PASS [mem: ####, cpu: ######] cbor_of_mydatum
+/// │ PASS [mem: 186529, cpu:  94270621] cbor_of_mydatum
 /// │ ↳ @test cbor_of_mydatum()
 /// │ ↳ cbor.diagnostic(type):
 /// │ ↳ 121([_ 42, h'48656C6C6F2C20576F726C6421'])
 /// │ ↳ 
-/// ┕━━━━━━━━━━━━━━━━ 1 tests | 1 passed | 0 failed
 /// ```
 test cbor_of_mydatum() {
   trace @"@test cbor_of_mydatum()"

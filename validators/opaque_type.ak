@@ -6,17 +6,17 @@
 //// so we can make the type `opaque` to prevent them from being able to do this.
 ////
 //// ```
-//// ┍━ opaque_type ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-//// │ PASS [mem:  32883, cpu: 14516866] opaque_type
+//// ┍━ opaque_type ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+//// │ PASS [mem:  34687, cpu:  15510792] opaque_type
+//// │ ↳ @test opaque_type()
 //// │ ↳ @counter.get_value(counter: Counter)
 //// │ ↳ cbor.diagnostic(counter):
 //// │ ↳ 1
 //// │ ↳ 
-//// │ ↳ @test opaque_type()
 //// │ ↳ cbor.diagnostic(Int):
 //// │ ↳ 1
 //// │ ↳ 
-//// ┕━━━━━━━━━━━━━━━━ 1 tests | 1 passed | 0 failed
+//// ┕━━━━━━━━━━━━━━━━━ 1 tests | 1 passed | 0 failed
 //// ```
 
 use aiken/cbor

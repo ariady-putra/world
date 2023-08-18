@@ -29,11 +29,15 @@ fn is_even(n: Int) -> Bool {
 
 // aiken check -m dt
 
+/// │ PASS [mem:   2035, cpu:   1064852] dt_doc
+/// │ ↳ This is a trace: testing documentation!
 test dt_doc() {
   trace @"This is a trace: testing documentation!"
   1 + 1 == 2
 }
 
+/// │ PASS [mem:   1232, cpu:    465442] dt_trace
+/// │ ↳ This is a trace too: testing trace...
 test dt_trace() {
   trace @"This is a trace too: testing trace..."
   True
@@ -41,10 +45,8 @@ test dt_trace() {
 
 /// `aiken check -m dt_valid`
 /// ```
-/// ┍━ documentation_trace ━━━━━━━━━━━━━━━━━
-/// │ PASS [mem: ####, cpu: ######] dt_valid
+/// │ PASS [mem:   3836, cpu:   1886947] dt_valid
 /// │ ↳ is `n` odd?
-/// ┕━━━━━━━━━ 1 tests | 1 passed | 0 failed
 /// ```
 /// Only the trace from `is_odd` was captured,
 /// because `is_even` was in fact `NEVER` evaluated
