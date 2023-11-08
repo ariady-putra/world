@@ -1,5 +1,5 @@
 name = "hello/world"        # {organisation}/{project}
-version = "0.150.202308"
+version = "0.170.202311"
 license = "Apache-2.0"
 description = "Aiken contracts for project 'hello/world'"
 
@@ -10,5 +10,5 @@ platform = "github"         # `github`, `gitlab` or `bitbucket`
 
 [[dependencies]]            # `aiken packages`
 name = "aiken-lang/stdlib"
-version = "1.5.0"
+version = "1.7.0"
 source = "github"           # `github`, `gitlab` or `bitbucket`
